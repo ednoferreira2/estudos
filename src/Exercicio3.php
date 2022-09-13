@@ -139,11 +139,11 @@ class Palavras extends NumerosFelizes {
     public function printAnswer($soma) {
 
         echo $soma .': <br>';
-        $this->numberIsPrime ? 'É primo' : 'Não é primo';
+        echo $this->numberIsPrime ? 'É primo' : 'Não é primo';
         echo '<br>';
-        $this->numberIsHappy ? 'É Feliz' : 'Não é feliz';
+        echo $this->numberIsHappy ? 'É Feliz' : 'Não é feliz';
         echo '<br>';
-        $this->numberIsMultipleOf ? 'É múltiplo de 3 ou 5' : 'Não é múltiplo de 3 ou 5';
+        echo $this->numberIsMultipleOf ? 'É múltiplo de 3 ou 5' : 'Não é múltiplo de 3 ou 5';
         return;
     }
 
