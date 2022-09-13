@@ -14,7 +14,7 @@
 
 class NumerosFelizes {
 
-    private $numeroOriginal = '';
+    public $numeroOriginal = '';
     public $numeroLido = [];
     public $break = false;
 
@@ -48,14 +48,12 @@ class NumerosFelizes {
     public function somaNumeros($numeros) {
         
         if (in_array($numeros, $this->numeroLido)) {
-            //echo var_dump($this->numeroLido, $numeros); exit;
             $this->break = true;
             return false;
         }
         $this->numeroLido[] = $numeros;
 
         $numeros = str_split($numeros);
-        //echo var_dump($numeros) . '<br>';
         $soma = 0;
         
         foreach ($numeros as $n) {
