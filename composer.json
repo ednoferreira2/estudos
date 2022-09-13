@@ -1,0 +1,13 @@
+{
+    "name": "edno/estudos",
+    "description": "Estudos de tdd",
+    "authors": [
+        {
+            "name": "Edno Nunes Ferreira",
+            "email": "ednonunes22@gmai.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
