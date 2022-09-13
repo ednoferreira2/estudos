@@ -24,4 +24,4 @@ echo $Exercicio2->checkNumeroFeliz(14) . '<br>';
 */
 
 $Exercicio3 = new Palavras();
-echo $Exercicio3->checkPalavra('maionese') . '<br>';
+$Exercicio3->checkPalavra('maionese') . '<br>';

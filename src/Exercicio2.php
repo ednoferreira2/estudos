@@ -28,13 +28,11 @@ class NumerosFelizes {
             $numero = $this->somaNumeros($numero);
 
             if ($this->break) {
-                echo $this->numeroOriginal . ': Infeliz';
-                return;
+                return false;
             }
             // número feliz
             if ($numero === 1){
-                echo $this->numeroOriginal . ': Feliz';
-                return;
+                return true;
             }
             
             $this->checkNumeroFeliz($numero);

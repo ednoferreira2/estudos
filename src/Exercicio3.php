@@ -1,6 +1,5 @@
 <?php
 
-require 'Exercicio2.php';
 
 /**
  * Neste problema, dado uma palavra composta somente por letras [a-zA-Z], cada letra 
@@ -69,7 +68,7 @@ class Palavras extends NumerosFelizes {
 
             $this->numberIsMultipleOf = $this->isMultipleOf3Or5($soma);
 
-            $this->printAnswer();
+            $this->printAnswer($soma);
 
         } else {
             echo 'Erro: Deve ser inserida apenas uma palavra, contendo apenas letras maiúsculas ou minúsculas.';
@@ -86,7 +85,6 @@ class Palavras extends NumerosFelizes {
         foreach ($str as $key => $value) {
             $soma += $this->letras[$value];
         }
-        echo $soma . '<br>';
         return $soma;
     }
 
@@ -109,7 +107,7 @@ class Palavras extends NumerosFelizes {
 
     public function isMultipleof3Or5($number) {
 
-        return ($this->isMultipleOf($number, 3) || $this->isMultipleOf($number, 5));
+        return ($this->checkMultiple($number, 3) || $this->checkMultiple($number, 5));
     }
 
     /**
@@ -134,18 +132,19 @@ class Palavras extends NumerosFelizes {
     /**
      * Verifica se $check é múltiplo de $num
      */
-    public function isMultipleOf($check, $num) {
+    public function checkMultiple($check, $num) {
         return ( ($check % $num) == 0);
     }
 
     public function printAnswer($soma) {
 
         echo $soma .': <br>';
-        $this->numberIsPrime ? 'É primo' : 'Não ´´e primo';
+        $this->numberIsPrime ? 'É primo' : 'Não é primo';
         echo '<br>';
         $this->numberIsHappy ? 'É Feliz' : 'Não é feliz';
         echo '<br>';
         $this->numberIsMultipleOf ? 'É múltiplo de 3 ou 5' : 'Não é múltiplo de 3 ou 5';
+        return;
     }
 
 }
