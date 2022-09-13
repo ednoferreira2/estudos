@@ -14,19 +14,28 @@
 
 class NumerosFelizes {
 
-    public $numerosLidos = [];
+    private $numeroOriginal = '';
+    public $numeroLido = [];
     public $break = false;
 
     public function checkNumeroFeliz($numero) {
 
         if ($numero > 0) {
+
+            if ( empty($this->numeroOriginal) )
+                $this->numeroOriginal = $numero;
+            
             $numero = $this->somaNumeros($numero);
+
             if ($this->break) {
-                return 'infeliz'; // número não passou
+                echo $this->numeroOriginal . ': Infeliz';
+                return;
             }
             // número feliz
-            if ($numero == 1)
-              return 'feliz';
+            if ($numero === 1){
+                echo $this->numeroOriginal . ': Feliz';
+                return;
+            }
             
             $this->checkNumeroFeliz($numero);
         }
@@ -37,13 +46,22 @@ class NumerosFelizes {
     }
 
     public function somaNumeros($numeros) {
+        
+        if (in_array($numeros, $this->numeroLido)) {
+            //echo var_dump($this->numeroLido, $numeros); exit;
+            $this->break = true;
+            return false;
+        }
+        $this->numeroLido[] = $numeros;
+
         $numeros = str_split($numeros);
-        echo var_dump($numeros) . '<br>';
+        //echo var_dump($numeros) . '<br>';
         $soma = 0;
+        
         foreach ($numeros as $n) {
+            $this->numerosLidos[] = $n;
             $soma += $this->quadrado($n, 2);
         }
-        echo $soma .'<br>';
         return (int)$soma;
     }
 

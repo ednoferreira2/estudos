@@ -10,7 +10,13 @@ echo $Exercicio1->caso3() . '<br>';
 */
 
 $Exercicio2 = new NumerosFelizes();
-echo "número 7: ". $Exercicio2->checkNumeroFeliz(7) . '<br>';
-//echo "número 8: ". $Exercicio2->checkNumeroFeliz(8) . '<br>';
-//echo "número 10: ". $Exercicio2->checkNumeroFeliz(10) . '<br>';
-//echo "número 14: ". $Exercicio2->checkNumeroFeliz(14) . '<br>';
+echo $Exercicio2->checkNumeroFeliz(7) . '<br>';
+
+$Exercicio2 = new NumerosFelizes();
+echo $Exercicio2->checkNumeroFeliz(8) . '<br>';
+
+$Exercicio2 = new NumerosFelizes();
+echo $Exercicio2->checkNumeroFeliz(10) . '<br>';
+
+$Exercicio2 = new NumerosFelizes();
+echo $Exercicio2->checkNumeroFeliz(14) . '<br>';
