@@ -121,7 +121,7 @@ class Palavras extends NumerosFelizes {
             return false;
         }
 
-        // se contém paneas letras:
+        // se contém apenas letras:
         if (!ctype_alpha($string)) {
             return false;
         }
