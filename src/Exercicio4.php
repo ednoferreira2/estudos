@@ -76,13 +76,13 @@ Além do mais, a comunicação com o serviço do correio deverá ser através de
     private $productName;
     private $value;
 
-    public function __consctruct(string $productName, int $value) {
+    public function __construct(string $productName, int $value) {
         
         $this->productName = $productName;
         $this->value = $value; // utilizei int para fins de estudo, mas poderia ser float também.
     }
 
-    public function getValue() : int
+    public function getValue(): int
     {
         return $this->value;
     }
